@@ -21,12 +21,10 @@ cd ..
 echo      Backend setup complete!
 echo.
 
-:: Setup Frontend
+:: Setup Frontend (now at root)
 echo [2/3] Setting up React frontend...
-cd frontend
 echo      Installing npm packages...
 call npm install --silent
-cd ..
 echo      Frontend setup complete!
 echo.
 

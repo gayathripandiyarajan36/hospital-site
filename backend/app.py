@@ -213,6 +213,8 @@ if __name__ == '__main__':
             db.session.add(default_admin)
             db.session.commit()
             print("Default admin account created: admin / admin123")
-            
-    print("CarePlus Hospital Backend Server running on http://127.0.0.1:5000")
-    app.run(debug=True, port=5000)
+
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('FLASK_DEBUG', '1') == '1'
+    print(f"CarePlus Hospital Backend Server running on http://127.0.0.1:{port}")
+    app.run(debug=debug, host='0.0.0.0', port=port)

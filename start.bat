@@ -22,7 +22,7 @@ timeout /t 3 /nobreak >nul
 
 :: Start Frontend in a new window
 echo [*] Starting Frontend (Vite on port 5173)...
-start "CarePlus Frontend" cmd /k "cd frontend && npm run dev"
+start "CarePlus Frontend" cmd /k "cd /d "%~dp0" && npm run dev"
 
 :: Wait for servers to start
 timeout /t 4 /nobreak >nul
